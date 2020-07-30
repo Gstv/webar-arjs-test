@@ -1,0 +1,25 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <!-- <a-scene embedded arjs>
+  	<a-marker preset="hiro">
+        <a-box position='0 0.5 0' material='color: black;'></a-box>
+  	</a-marker> -->
+      
+    <!-- Scene -->
+    <a-scene id="scene" arjs='trackingMethod: best; debugUIEnabled: false;' vr-mode-ui="enabled: false" ar-template>
+        
+        <!-- Assets -->
+        <a-assets>
+            <a-asset-item id="tree" src="/assets/eucalipto_v2_SPARK_EXPORT.gltf"></a-asset-item>
+        </a-assets>
+      
+        <!-- Entities -->
+        <a-entity gltf-model="#tree" scale="0.3 0.3 0.3"></a-entity>
+        <a-entity camera position="0 0.6 2"></a-entity>
+          
+    </a-scene>
+  </body>
+</html>
